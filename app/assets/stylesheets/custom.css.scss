@@ -1,0 +1,37 @@
+/*To change font: 
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
+
+/*Changes color of navbar:*/
+$navbarBackgroundHighlight: #999999;
+$navbarBackground: #999999;
+
+$navbarLinkColor: white;
+$btnPrimaryBackground: orange;
+
+@import "bootstrap";
+
+body {
+	padding-top: 60px;
+}
+
+@import "bootstrap-responsive";
+
+/*Deletes bottom shadow on navbar:*/
+.navbar-inner {
+	@include box-shadow(none !important);
+	border:0;
+}
+
+.span3 {
+	margin-left:10px;
+	color: red;
+}
+
+.footer {
+	padding-top: 50px;
+	color:black;
+	a {
+		color:#999999;
+	}
+}
