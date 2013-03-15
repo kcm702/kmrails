@@ -1,3 +1,19 @@
+<% if user_signed_in? %>
+
+<div class="row-fluid">
+	<div class="span3">
+	 	<%= render 'layouts/sidebar' %>
+	</div>
+
+	<div class="span9">
+	 	<div class="hero-unit">
+			<h1>Welcome back to One Month Rails!</h1>
+		</div>
+	</div>
+</div>
+
+<% else %>
+
 <div class="row-fluid">
 	<div class="span3">
 	 	<%= render 'layouts/sidebar' %>
@@ -10,8 +26,10 @@
 				You've found the home page for <%= link_to "One Month Rails", "http://onemonthrails.com"  %>
 			</p>
 			<p> 
-				<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
+				<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 			<p>
 		</div>
 	</div>
 </div>
+
+<% end %>
