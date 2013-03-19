@@ -18,3 +18,6 @@ doc/
 *~
 .project
 .idea
+
+# Ignore the public system folder for Paperclip uploaded files
+/public/system

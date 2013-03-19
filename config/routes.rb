@@ -5,6 +5,7 @@ Kmrails::Application.routes.draw do
   devise_for :users
 
   get 'about' => 'pages#about'
+  get 'pins' => 'pages#pins'
 
   root :to => 'pages#home'
 
