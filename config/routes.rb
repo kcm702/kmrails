@@ -7,7 +7,7 @@ Kmrails::Application.routes.draw do
   get 'about' => 'pages#about'
   get 'pins' => 'pages#pins'
 
-  root :to => 'pages#home'
+  root :to => 'pins#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

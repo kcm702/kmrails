@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+
+	<div class="hero-unit welcome">
+	 <h1>Welcome back, <%= current_user.username %>, to ADAMinterest!</h1>
+	</div>
+	
+
+<% else %>
+
+
+	 	<div class="hero-unit welcome">
+			<h1>Welcome to ADAMinterest!</h1>
+			<p>
+				You've found the home page for <%= link_to "One Month Rails", "http://onemonthrails.com"  %>
+			</p>
+			<p> 
+				<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+			<p>
+		</div>
+	
+
+<% end %>
