@@ -1,11 +1,16 @@
 <div class="row">
 	<div class="span6 offset3">
 		<div class="well">
-			<p>
-				<%= image_tag @pin.image %>
+			<p align="center">
+				<%= link_to (image_tag @pin.image), (@pin.website), :target => '_blank' %>
 			</p>
 			<p>
-			  	<%= @pin.description %>
+			  	<%= @pin.description %><br />
+			  	<% if @pin.website==nil %>
+			  		
+			  	<% else %>
+			  		<%= link_to (@pin.website), (@pin.website), :target => '_blank', class: 'pin_origin' %>
+			  	<% end %>
 			</p>
 			<p>
 			  	Posted by <%= @pin.user.username %>
