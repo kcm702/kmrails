@@ -67,4 +67,14 @@ Kmrails::Application.configure do
 
   # Required for Devise gem - must change host to domain name once live
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #Paperclip should use Amazon S3 for Heroku
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "kmrails",
+      :access_key_id => "AKIAJSV3YS2KB6IMS3HQ",
+      :secret_access_key => "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"
+    }
+}
 end
