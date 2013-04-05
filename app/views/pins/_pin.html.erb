@@ -5,7 +5,7 @@
 		<%= pin.description %>
 	</p>
 	<p>
-		Posted by <%= pin.user.username %>
+		Posted by <%= link_to pin.user.username, pin.user %>
 	</p>	
 	<p>
 		<%= link_to 'Show', pin %>

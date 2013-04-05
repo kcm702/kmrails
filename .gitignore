@@ -21,3 +21,6 @@ doc/
 
 # Ignore the public system folder for Paperclip uploaded files
 /public/system
+
+# Ignore the sample images
+/sampleimages
